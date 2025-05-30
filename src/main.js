@@ -1,9 +1,9 @@
 export function addonTemplate(p5, fn, lifecycles){
-  lifecycles.presetup = function(){};
+  lifecycles.presetup = function(){};    // Everything here will run before the `setup()` step of a sketch
 
-  fn.myAddonVariable = 'some value';
-  fn.drawSomething = function(){};
-  fn.loadSomething = async function(){};
+  fn.myAddonVariable = 'some value';     // This variable will be available in a sketch as `myAddonVariable`
+  fn.drawSomething = function(){};       // This function will be available in the sketch as `drawSomething`
+  fn.loadSomething = async function(){}; // This is an asyncronous function: for example, `await loadSomething()`
 };
 
 if(typeof p5 !== 'undefined'){
