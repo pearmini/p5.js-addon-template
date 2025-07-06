@@ -1,13 +1,16 @@
-# p5.js Addon Template
+# p5.js Addon Templates
 
-This project acts as a starting point template that you may use to start writing your own addon for extending the functionalities of p5.js. A minimal starter setup is provided in this repo including starting files and build tools.
+This project provides a number of templates for starting your own p5.js addon for extending the functionaliteis of p5.js.
 
 ## Usage
-Simply fork this repo or make a copy of it locally. You should replace the various references to the addon name within this project to the name of your addon:
+To use one of the templates, run `npm create p5.js-addon` then follow the provided prompts.
+
+You should replace the various references to the addon name within this project to the name of your addon:
 
 * `src/main.js` - Rename `addonTemplate`
 * `rollup.config.js` - Rename `addonTemplate`
 * `package.json` - Rename `addonTemplate` and `p5.js-addon-template`
+* `examples/` - Populate with your own examples
 
 After that you can continue to write relevant code for your addon using `src/main.js` as the entry point. You may add additional files or NPM dependencies as necessary.
 

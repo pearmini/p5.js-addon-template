@@ -1,18 +1,22 @@
 {
-  "name": "p5.js-addon-template",
+  "name": "create-p5.js-addon",
   "version": "0.0.0",
   "description": "Template project for starting an addon for p5.js",
   "type": "module",
-  "exports": {
-    ".": "./dist/addonTemplate.esm.js"
-  },
+  "bin": "./script.js",
+  "exports": {},
+  "files": [
+    "templates/*"
+  ],
   "scripts": {
-    "build": "rollup -c rollup.config.js"
+    "build": "npm run build --workspaces"
   },
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.4",
-    "rollup": "^4.41.1"
-  }
+  "devDependencies": {},
+  "dependencies": {
+    "@inquirer/prompts": "^7.6.0",
+    "change-case": "^5.4.4"
+  },
+  "workspaces": ["templates/*"]
 }
