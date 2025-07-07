@@ -7,7 +7,7 @@ try{
   const templates = await fs.readdir('./templates');
 
   const answer = await select({
-    message: 'Select a package manager',
+    message: 'Select an addon template',
     choices: templates.map((template) => {
       return {
         name: sentenceCase(template),
@@ -22,7 +22,7 @@ try{
   });
 }catch(err){
   if(err.name === 'ExitPromptError'){
-    console.log('User quit initialization');
+    console.log('No template chosen, exiting.');
   }else{
     throw err;
   }
