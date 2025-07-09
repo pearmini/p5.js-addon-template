@@ -16,8 +16,7 @@ try{
     })
   });
 
-  await fs.mkdir('./result', {recursive: true})
-  await fs.cp(path.join('./templates', answer), './result', {
+  await fs.cp(path.join('./templates', answer), process.cwd(), {
     recursive: true
   });
 }catch(err){
