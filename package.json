@@ -6,7 +6,8 @@
   "bin": "./script.js",
   "exports": {},
   "files": [
-    "templates/*"
+    "templates/*",
+    "script/*"
   ],
   "scripts": {
     "build": "npm run build --workspaces"
