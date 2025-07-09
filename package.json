@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "description": "Template project for starting an addon for p5.js",
   "type": "module",
-  "bin": "./script.js",
+  "bin": "./script/init.js",
   "exports": {},
   "files": [
     "templates/*",
