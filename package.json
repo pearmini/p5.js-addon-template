@@ -1,6 +1,6 @@
 {
   "name": "create-p5.js-addon",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Template project for starting an addon for p5.js",
   "type": "module",
   "bin": "./script/init.js",
