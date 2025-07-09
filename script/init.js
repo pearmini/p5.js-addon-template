@@ -4,11 +4,20 @@ import { select } from '@inquirer/prompts';
 import fs from 'node:fs/promises';
 import { sentenceCase } from 'change-case';
 import path from 'node:path';
+import { Command } from 'commander';
+import pjson from '../package.json' with { type: 'json' };
 
 try{
-  const templates = await fs.readdir('./templates');
+  const program = new Command();
+  program
+    .version(pjson.version)
+    .arguments('[project-folder]')
+    .parse(process.argv);
 
-  const answer = await select({
+  const writePath = path.resolve(program.args?.[0] || '.');
+  const templates = await fs.readdir(path.join(import.meta.dirname, '../templates'));
+
+  const chosenTemplate = await select({
     message: 'Select an addon template',
     choices: templates.map((template) => {
       return {
@@ -18,7 +27,8 @@ try{
     })
   });
 
-  await fs.cp(path.join('./templates', answer), process.cwd(), {
+  await fs.mkdir(writePath, {recursive: true});
+  await fs.cp(path.join(import.meta.dirname, '../templates', chosenTemplate), writePath, {
     recursive: true
   });
 }catch(err){

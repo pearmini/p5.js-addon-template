@@ -14,10 +14,10 @@
   },
   "author": "",
   "license": "MIT",
-  "devDependencies": {},
   "dependencies": {
     "@inquirer/prompts": "^7.6.0",
-    "change-case": "^5.4.4"
+    "change-case": "^5.4.4",
+    "commander": "^14.0.0"
   },
   "workspaces": [
     "templates/*"
