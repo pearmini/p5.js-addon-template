@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { select } from '@inquirer/prompts';
 import fs from 'node:fs/promises';
 import { sentenceCase } from 'change-case';
